@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+</head>
+
+<!--CSS-->
+<style>
+    body {
+        text-align: center;
+        font-size: larger;
+        padding-top: 10px;
+        background-color: rgb(88, 57, 117);
+
+
+    }
+
+    .container {
+        margin: auto;
+        left: 30%;
+        width: 200px;
+        height: 300px;
+        border-radius: 5px;
+        background-color: black;
+        border: 2px solid rgb(122, 155, 209);
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom:0px;
+        ;
+    }
+
+    .key {
+        padding: 10px;
+        margin: auto;
+    }
+
+    .button {
+        align-items: center;
+        height: 60px;
+        width: 40px;
+        color: rgb(255, 254, 254);
+        background-color: rgb(121, 109, 109);
+        border-radius: 5px;
+        border: 2px solid black;
+        font-size: large;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .side {
+        background-color: rgb(165, 94, 144);
+    }
+
+    .equal-sign {
+        background-color: rgb(205, 106, 183);
+        border-color: black;
+    }
+
+    .button:hover {
+        color: rgb(195, 192, 192);
+    }
+
+    .clear {
+        color: blueviolet;
+        height: 30px;
+        width: 60px;
+
+        /* margin-left:90px;*/
+        border-radius: 5px;
+    }
+
+    .clear, .lie:hover {
+        background-color: beige;
+    }
+
+    .screen {
+
+        color: black;
+        width: 70%;
+        height: 0px;
+        padding: 10px;
+        padding-left: 10px;
+        margin: auto;
+        margin-bottom: 1px;
+    }
+
+    .int {
+        display: flex;
+        margin-left:20px;
+        margin-top:5px;
+        
+    }
+    .lie {
+        width: 90px;
+        height:30px;
+        border-radius: 5px;
+        color:blueviolet;
+    
+    }
+</style>
+
+<body>
+    <!--heading-->
+    <header>
+        <h3>Zulaigah's Calculator</h3>
+    </header>
+    <div class="container">
+        <div>
+            <input type="text" id="result" class="screen" style="align-content: center" />
+        </div>
+        <div class="int">
+            <input type="button" value="RESET" onclick="clearTheScreen()" class="clear" />
+            <input type="button" value="DEL" onclick="deleteValue()" class="lie">
+        </div>
+        <!--The numbers-->
+        <div class="key" style="align-items: center">
+            <input type="button" class="button" value="7" onClick="display('7')" />
+            <input type="button" class="button" value="8" onClick="display('8')" />
+            <input type="button" class="button" value="9" onClick="display('9')" />
+            <input type="button" class="button side" value="-" onClick="display('-')" />
+            <br />
+            <input type="button" class="button" value="4" onClick="display('4')" />
+            <input type="button" class="button" value="5" onClick="display('5')" />
+            <input type="button" class="button" value="6" onClick="display('6')" />
+            <input type="button" class="button side" value="/" onClick="display('/')" />
+            <br />
+            <input type="button" class="button" value="1" onClick="display('1')" />
+            <input type="button" class="button" value="2" onClick="display('2')" />
+            <input type="button" class="button" value="3" onClick="display('3')" />
+            <input type="button" class="button operator side" value="*" onClick="display('*')" />
+            <br />
+            <input type="button" class="button" value="." onClick="display('.')" />
+            <input type="button" class="button" value="0" onClick="display('0')" />
+            <input type="button" class="button equal-sign" value="=" onClick="solve()" />
+            <input type="button" class="button operator side" value="+" onClick="display('+')" />
+        </div>
+    </div>
+
+    <!--script link-->
+    <script src="/index.js"></script>
+</body>
+
+</html>
